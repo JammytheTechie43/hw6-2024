@@ -43,7 +43,7 @@ document.getElementById("skip").addEventListener("click", function() {
 document.getElementById("mute").addEventListener("click", function() {
 	var video = document.querySelector(".video");
 	video.muted = !video.muted;
-	console.log("Muted: ${video.muted}");
+	this.innerHTML = video.muted ? "Unmute" : "Mute";
 });
 
 document.getElementById("slider").addEventListener("input", function() {
