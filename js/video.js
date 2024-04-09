@@ -49,7 +49,7 @@ document.getElementById("mute").addEventListener("click", function() {
 document.getElementById("slider").addEventListener("input", function() {
 	var video = document.querySelector(".video");
 	video.volume = this.value / 100;
-	document.getElementById("volume").innerHTML = "${this.value}%";
+	document.getElementById("volume").innerHTML = this.value;
 });
 
 document.getElementById("vintage").addEventListener("click", function() {
