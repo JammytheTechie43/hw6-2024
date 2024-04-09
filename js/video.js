@@ -11,12 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	video.loop = false;
 });
 
-document.getElementById("play").addEventListener("click", function() {
-	var video = document.querySelector(".video");
-	video.play();
-	var volumeDisplay = document.getElementById("volume");
-	volumeDisplay.innerHTML = video.volume * 100;
-	console.log("Volume: ${video.volume}");
+document.getElementById('play').addEventListener('click', function() {
+    var video = document.querySelector('.video');
+    video.play();
+    console.log(`Volume: ${video.volume}`);
 });
 
 document.getElementById("pause").addEventListener("click", function() {
@@ -48,10 +46,10 @@ document.getElementById("mute").addEventListener("click", function() {
 	this.innerHTML = video.muted ? "Unmute" : "Mute";
 });
 
-document.getElementById("slider").addEventListener("input", function() {
-	var video = document.querySelector(".video");
-	video.volume = this.value / 100;
-	document.getElementById("volume").innerHTML = this.value;
+document.getElementById('slider').addEventListener('input', function() {
+    var video = document.querySelector('.video');
+    video.volume = this.value / 100;
+    document.getElementById('volume').textContent = `${this.value}%`;
 });
 
 document.getElementById("vintage").addEventListener("click", function() {
