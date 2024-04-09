@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("play").addEventListener("click", function() {
 	var video = document.querySelector(".video");
 	video.play();
+	var volumeDisplay = document.getElementById("volume");
+	volumeDisplay.innerHTML = "${math.round(video.volume * 100)}%";
 	console.log("Volume: ${video.volume}");
 });
 
