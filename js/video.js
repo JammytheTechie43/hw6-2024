@@ -46,10 +46,10 @@ document.getElementById("mute").addEventListener("click", function() {
 	console.log("Muted: ${video.muted}");
 });
 
-document.getElementById("slider").addEventListener("change", function() {
+document.getElementById("slider").addEventListener("input", function() {
 	var video = document.querySelector(".video");
 	video.volume = this.value / 100;
-	console.log("Volume: ${video.volume}");
+	document.getElementById("volume").innerHTML = "${this.value}%";
 });
 
 document.getElementById("vintage").addEventListener("click", function() {
